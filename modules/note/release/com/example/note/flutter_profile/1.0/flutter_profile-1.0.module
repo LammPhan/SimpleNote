@@ -1,0 +1,146 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.example.note",
+    "module": "flutter_profile",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5"
+    }
+  },
+  "variants": [
+    {
+      "name": "profileVariantProfileApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.flutter",
+          "module": "flutter_embedding_profile",
+          "version": {
+            "requires": "1.0.0-0545f8705df301877d787107bac1a6e9fc9ee1ad"
+          }
+        },
+        {
+          "group": "io.flutter",
+          "module": "armeabi_v7a_profile",
+          "version": {
+            "requires": "1.0.0-0545f8705df301877d787107bac1a6e9fc9ee1ad"
+          }
+        },
+        {
+          "group": "io.flutter",
+          "module": "arm64_v8a_profile",
+          "version": {
+            "requires": "1.0.0-0545f8705df301877d787107bac1a6e9fc9ee1ad"
+          }
+        },
+        {
+          "group": "io.flutter",
+          "module": "x86_64_profile",
+          "version": {
+            "requires": "1.0.0-0545f8705df301877d787107bac1a6e9fc9ee1ad"
+          }
+        },
+        {
+          "group": "com.tekartik.sqflite",
+          "module": "sqflite_profile",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "io.flutter.plugins.pathprovider",
+          "module": "path_provider_android_profile",
+          "version": {
+            "requires": "1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "flutter_profile-1.0.aar",
+          "url": "flutter_profile-1.0.aar",
+          "size": 9616047,
+          "sha512": "ae0c0b89d2d62d9b1e7ce8af5bad7b6a954f9744577455ad037ac5fb227582c09ecd8c5339ec2fca0e1f9c60dcaef88005e8bdc0be72c0b615575d25a9a5d5f9",
+          "sha256": "73458aabe428f67dbd1bd3c98da7909273d453586f12d565e80b92fda0b17122",
+          "sha1": "6e3595320aafa11ca1ed0b72c372028a2586f308",
+          "md5": "4e591bb9f80475612735bb9b841b17a7"
+        }
+      ]
+    },
+    {
+      "name": "profileVariantProfileRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.flutter",
+          "module": "flutter_embedding_profile",
+          "version": {
+            "requires": "1.0.0-0545f8705df301877d787107bac1a6e9fc9ee1ad"
+          }
+        },
+        {
+          "group": "io.flutter",
+          "module": "armeabi_v7a_profile",
+          "version": {
+            "requires": "1.0.0-0545f8705df301877d787107bac1a6e9fc9ee1ad"
+          }
+        },
+        {
+          "group": "io.flutter",
+          "module": "arm64_v8a_profile",
+          "version": {
+            "requires": "1.0.0-0545f8705df301877d787107bac1a6e9fc9ee1ad"
+          }
+        },
+        {
+          "group": "io.flutter",
+          "module": "x86_64_profile",
+          "version": {
+            "requires": "1.0.0-0545f8705df301877d787107bac1a6e9fc9ee1ad"
+          }
+        },
+        {
+          "group": "com.tekartik.sqflite",
+          "module": "sqflite_profile",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "io.flutter.plugins.pathprovider",
+          "module": "path_provider_android_profile",
+          "version": {
+            "requires": "1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "flutter_profile-1.0.aar",
+          "url": "flutter_profile-1.0.aar",
+          "size": 9616047,
+          "sha512": "ae0c0b89d2d62d9b1e7ce8af5bad7b6a954f9744577455ad037ac5fb227582c09ecd8c5339ec2fca0e1f9c60dcaef88005e8bdc0be72c0b615575d25a9a5d5f9",
+          "sha256": "73458aabe428f67dbd1bd3c98da7909273d453586f12d565e80b92fda0b17122",
+          "sha1": "6e3595320aafa11ca1ed0b72c372028a2586f308",
+          "md5": "4e591bb9f80475612735bb9b841b17a7"
+        }
+      ]
+    }
+  ]
+}
