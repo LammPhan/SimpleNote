@@ -70,9 +70,13 @@ class _EventListScreenState extends State<EventListScreen> {
     return Scaffold(
       backgroundColor: Color(0xff252525),
       appBar: AppBar(
-        title: Text(
-          'Notes',
-          style: GoogleFonts.nunito(),
+        backgroundColor: Color(0xff252525),
+        title: Container(
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Notes',
+            style: GoogleFonts.nunito(color: Colors.white),
+          ),
         ),
         actions: [
           IconButton(
