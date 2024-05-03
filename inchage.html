@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collapsible Tree View with Dynamic Additions</title>
+    <style>
+        .tree {
+            list-style-type: none;
+            padding-left: 1em;
+        }
+
+        .tree li {
+            margin: 0;
+            padding: 0 1em;
+            line-height: 2em;
+            color: #000;
+            cursor: pointer;
+        }
+
+        .tree li:hover {
+            background-color: #f4f4f4;
+        }
+
+        .tree li.collapsed:before {
+            content: "+ ";
+        }
+
+        .tree li.expanded:before {
+            content: "- ";
+        }
+
+        .tree li.has-children {
+            font-weight: bold;
+        }
+
+        .tree li.child {
+            display: none;
+            padding-left: 1em;
+        }
+
+        .add-node {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="tree" id="tree">
+        <li class="has-children collapsed">Parent 1
+            <ul class="child">
+                <li>Child 1</li>
+                <li>Child 2</li>
+                <li>Child 3</li>
+            </ul>
+        </li>
+        <li class="has-children collapsed">Parent 2
+            <ul class="child">
+                <li>Child 1</li>
+                <li>Child 2</li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="add-node">
+        <input type="text" id="newNodeText" placeholder="Enter node text">
+        <button onclick="addNode()">Add Node</button>
+        <input type="text" id="newChildText" placeholder="Enter child text">
+        <button onclick="addChild()">Add Child</button>
+    </div>
+
+    <script>
+        function toggleNode(event) {
+            var target = event.target.closest('li');
+            if (target.classList.contains('has-children')) {
+                target.classList.toggle('expanded');
+                var child = target.querySelector('.child');
+                if (child) {
+                    child.classList.toggle('show');
+                }
+            }
+        }
+
+        function addNode() {
+            var newNodeText = document.getElementById('newNodeText').value;
+            if (newNodeText.trim() === '') return;
+
+            var tree = document.getElementById('tree');
+            var newNode = document.createElement('li');
+            newNode.textContent = newNodeText;
+            newNode.className = 'has-children collapsed';
+            tree.appendChild(newNode);
+        }
+
+        function addChild() {
+            var newChildText = document.getElementById('newChildText').value;
+            if (newChildText.trim() === '') return;
+
+            var selectedNode = document.querySelector('.tree li.expanded');
+            if (!selectedNode) return;
+
+            var childList = selectedNode.querySelector('.child');
+            if (!childList) {
+                childList = document.createElement('ul');
+                childList.className = 'child';
+                selectedNode.appendChild(childList);
+            }
+
+            var newChild = document.createElement('li');
+            newChild.textContent = newChildText;
+            childList.appendChild(newChild);
+        }
+
+        document.addEventListener('click', toggleNode);
+    </script>
+
+</body>
+
+</html>
